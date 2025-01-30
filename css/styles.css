@@ -40,6 +40,8 @@ main #search-form input {
   height: 32px;
   border-radius: 5px;
   border: none;
+  padding: 0px 10px;
+  font-size: 16px;
 }
 
 main #search-form button {
@@ -75,7 +77,7 @@ main #weather-info .weather-data span {
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 380px) {
   main #search-form form {
     flex-direction: column;
   }

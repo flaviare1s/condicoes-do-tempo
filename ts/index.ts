@@ -13,7 +13,8 @@ form?.addEventListener("submit", async (event) => {
     return;
   }
   
-  const response = await fetch(
+  try {
+    const response = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=YOUR_API_KEY_HERE&units=metric&lang=pt_br`
   );
   const data = await response.json();
@@ -31,4 +32,7 @@ form?.addEventListener("submit", async (event) => {
       </div>
     <img src="${infos.icon}" alt="${infos.localization}">
   `;
+  } catch (error) {
+    console.log(error);
+  }
 });

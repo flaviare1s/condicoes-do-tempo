@@ -20,18 +20,23 @@ form === null || form === void 0 ? void 0 : form.addEventListener("submit", (eve
         alert("O local precisa ter, pelo menos, 3 letras!");
         return;
     }
-    const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=YOUR_API_KEY_HERE&units=metric&lang=pt_br`);
-    const data = yield response.json();
-    const infos = {
-        temp: Math.round(data.main.temp),
-        localization: data.name,
-        icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-    };
-    sectionWeatherInfo.innerHTML = `
+    try {
+        const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=YOUR_API_KEY_HERE&units=metric&lang=pt_br`);
+        const data = yield response.json();
+        const infos = {
+            temp: Math.round(data.main.temp),
+            localization: data.name,
+            icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+        };
+        sectionWeatherInfo.innerHTML = `
     <div class="weather-data">
         <h2>${infos.localization}</h2>
         <span>${infos.temp}°C</span>
       </div>
     <img src="${infos.icon}" alt="${infos.localization}">
   `;
+    }
+    catch (error) {
+        console.log(error);
+    }
 }));

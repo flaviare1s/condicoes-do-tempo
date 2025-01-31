@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import { apiKey } from "../utils/apiKey";
 const form = document.querySelector("#search-form > form");
 const input = document.querySelector("#input-localization");
 const sectionWeatherInfo = document.querySelector("#weather-info");
@@ -21,7 +21,7 @@ form === null || form === void 0 ? void 0 : form.addEventListener("submit", (eve
         return;
     }
     try {
-        const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=YOUR_API_KEY_HERE&units=metric&lang=pt_br`);
+        const response = yield fetch(`https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=${apiKey}&units=metric&lang=pt_br`);
         const data = yield response.json();
         const infos = {
             temp: Math.round(data.main.temp),

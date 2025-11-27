@@ -16,8 +16,9 @@ form?.addEventListener("submit", async (event) => {
   }
 
   try {
+    const apiKey = process.env.OPENWEATHER_API_KEY;
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=YOUR_API_KEY_HERE&units=metric&lang=pt_br`
+      `https://api.openweathermap.org/data/2.5/weather?q=${localization}&appid=${apiKey}&units=metric&lang=pt_br`
     );
 
     // Checando se a resposta da API foi bem-sucedida

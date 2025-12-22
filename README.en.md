@@ -1,4 +1,4 @@
-# Condições do Tempo
+# Weather Conditions
 
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](README.en.md) [![Português](https://img.shields.io/badge/lang-Português-green.svg)](README.md)
 
@@ -8,54 +8,58 @@
 [![Webpack](https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=black)](https://webpack.js.org/)
 [![OpenWeather API](https://img.shields.io/badge/OpenWeather-EB6E4B?style=for-the-badge&logo=openweathermap&logoColor=white)](https://openweathermap.org/api)
 
-## 🌤️ Sobre o Projeto
+## 🌤️ About the Project
 
-Aplicação que mostra as condições do tempo em tempo real através do consumo da OpenWeather API. Desenvolvida com TypeScript, HTML e CSS, utilizando Webpack para bundling.
+A weather application that displays real-time weather conditions using the OpenWeather API. Built with TypeScript, HTML, and CSS, using Webpack for bundling.
 
-🚀 **[Ver Demo ao Vivo](https://flaviare1s.github.io/condicoes-do-tempo/)**
+🚀 **[Live Demo](https://flaviare1s.github.io/condicoes-do-tempo/)**
 
-## ⚙️ Configuração
+## ⚙️ Setup
 
-1. Clone o repositório:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/flaviare1s/condicoes-do-tempo.git
    cd condicoes-do-tempo
    ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-3. Crie um arquivo `.env` na raiz do projeto baseado no `.env.example`:
+3. Create a `.env` file in the project root based on `.env.example`:
 
    ```bash
    cp .env.example .env
    ```
 
-4. Adicione sua API key do OpenWeather no arquivo `.env`:
+4. Add your OpenWeather API key to the `.env` file:
 
    ```
-   OPENWEATHER_API_KEY=sua_api_key_aqui
+   OPENWEATHER_API_KEY=your_api_key_here
    ```
 
-5. Compile o projeto:
+5. Build the project:
    ```bash
    npm run build
    ```
 
-## 🔑 Como obter uma API key
+## 🔑 How to Get an API Key
 
-1. Crie uma conta gratuita em [OpenWeather](https://openweathermap.org/)
-2. Acesse a seção API Keys no seu perfil
-3. Copie sua API key e adicione no arquivo `.env`
+1. Create a free account at [OpenWeather](https://openweathermap.org/)
+2. Access the API Keys section in your profile
+3. Copy your API key and add it to the `.env` file
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **TypeScript** - Linguagem de programação
-- **HTML5 & CSS3** - Estrutura e estilização
+- **TypeScript** - Programming language
+- **HTML5 & CSS3** - Structure and styling
 - **Webpack** - Module bundler
-- **OpenWeather API** - Dados meteorológicos
-- **dotenv** - Gerenciamento de variáveis de ambiente
+- **OpenWeather API** - Weather data
+- **dotenv** - Environment variables management
+
+## 📄 License
+
+This project is licensed under the ISC License.
